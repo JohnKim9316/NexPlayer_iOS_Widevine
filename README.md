@@ -666,12 +666,12 @@ Here is the entire code in NexPlayerQuickStart with Widevine.
     clientInfo.archName = @"arm64";
     clientInfo.buildInfo = @"0.1";
 
-    self.widevine.nexWVdelegate = self;
+
 
     // Create WidevineIntegration with clientInfo
     self.widevine = [[WidevineIntegration alloc] initWithNXPlayer:self.playerView.player clientInfo:
                      clientInfo];
-
+    self.widevine.nexWVdelegate = self;
 
     //This is the way how user can interact with player.
     self.playerView.player.delegate = self;
