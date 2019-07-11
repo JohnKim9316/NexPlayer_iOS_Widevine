@@ -503,11 +503,12 @@ NOTE: If the NexPlayerSDK is not located __under__ both widevine_cdm_sdk_release
     clientInfo.archName = @"arm64";
     clientInfo.buildInfo = @"0.1";
 
-    self.widevine.nexWVdelegate = self;
+
 
     // Create WidevineIntegration with clientInfo
     self.widevine = [[WidevineIntegration alloc] initWithNXPlayer:self.playerView.player clientInfo:
                      clientInfo];
+    self.widevine.nexWVdelegate = self;
 
     ...
 }
